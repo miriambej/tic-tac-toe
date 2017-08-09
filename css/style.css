@@ -9,13 +9,15 @@ h1{
 }
 
 .container {
-  width: 1100px;
-  height: 820px;
+  width: 70%;
+  height: 810px;
   margin: auto;
   background-color: #ff8f59;
   padding: 0;
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em;
+  position: relative;
+  overflow: hidden;
 }
 
 .tictactoe {
@@ -24,6 +26,7 @@ h1{
 
 .top{
   padding: 5px;
+  border-radius: 20%;
 }
 
 .button {
@@ -60,4 +63,41 @@ h1{
   background-color: #927608;
   opacity: 0.4;
   bottom: -22px;
+}
+
+.score-board-x {
+  background-color: #4242b9;
+  width: 131px;
+  height: 110px;
+  position: absolute;
+  top: 0%;
+  border: 6px;
+  border-color: #4242b9;
+  border-style: solid;
+  margin: 14px;
+  border-radius: 20%;
+}
+
+.score-board-y {
+  background-color: #4242b9;
+  width: 131px;
+  height: 110px;
+  position: absolute;
+  top: 0%;
+  border: 6px;
+  border-color: #4242b9;
+  border-style: solid;
+  right: 0;
+  margin: 14px;
+  border-radius: 20%;
+}
+
+#number-score, p {
+  font-family: 'Bowlby One', cursive;
+  color: white;
+  vertical-align: middle;
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+  font-size: 2em;
 }
