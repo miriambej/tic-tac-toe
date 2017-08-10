@@ -1,7 +1,7 @@
 //logic code
 tictactoe = {
 
-  players : [ { player:0, name: 'O', image:"./images/x.png", score:0}, { player:1 , name: 'X', image:"./images/o.png", score:0 } ],
+  players : [ { player:0, name: 'guitar', image:"./images/guitar.png", score:0}, { player:1 , name: 'piano', image:"./images/piano.png", score:0 } ],
 
   switcher:0,
 
@@ -9,13 +9,18 @@ tictactoe = {
 
   board : ["_","_","_","_","_","_","_","_","_"],
 
-  alertWinMessage(){
+  alertWinMessage(winner){
     setTimeout(function(){
       tictactoe.players[tictactoe.switcher].score++
       console.log(tictactoe.players[tictactoe.switcher].score);
-      alert(`The winner is ${tictactoe.players[tictactoe.switcher].name}`)
+      if (winner === 'x') {
+        alert(`The winner is guitar`);
+      } else {
+        alert(`The winner is piano`);
+      }
       tictactoe.reset()
     }, 150 )
+
   },
 
   alertDrawMessage(){
@@ -39,6 +44,10 @@ tictactoe = {
     this.board = ["_","_","_","_","_","_","_","_","_"]
     $(".top").removeAttr('clicked')
     this.turns = 0;
+    $("#number-score-guitar").html(tictactoe.players[0].score)
+    $("#number-score-piano").html(tictactoe.players[1].score)
+    tictactoe.players[0].sound.pause();
+    tictactoe.players[1].sound.pause();
   },
 
   // clearBoard(){
@@ -59,7 +68,7 @@ tictactoe = {
       (this.board[2]===player) && (this.board[4]===player) && (this.board[6]===player)  //diagonal
       ){
       //alert("you won");
-      this.alertWinMessage();
+      this.alertWinMessage(player);
       //this.reset();
       // t = setTimeout("tictactoe.reset()",2000);
       // this.clearBoard();
@@ -73,16 +82,15 @@ tictactoe = {
 
 }
 
-//UI/DOM code
-
-const render = function (){
-//...
-}
-
-
 //all DOM updating code will be here
 
 $(document).ready(function(){
+
+  let guitar = $('#sound1')[0];
+  tictactoe.players[0].sound = guitar;
+
+  let piano = $('#sound2')[0];
+  tictactoe.players[1].sound = piano;
 
   $('img').on('click', function() {
     console.log($(this));
@@ -90,29 +98,41 @@ $(document).ready(function(){
     if($(this).attr('clicked' )) {
       return;
     }
+    tictactoe.players[0].sound.pause();
+    tictactoe.players[0].sound.currentTime = 0;
+    tictactoe.players[1].sound.pause();
+    tictactoe.players[1].sound.currentTime = 0;
+    $(this).attr('src', tictactoe.players[tictactoe.switcher].sound.play())
+
+    // setTimeout(function (){
+    //   tictactoe.players[tictactoe.switcher].sound.pause();
+    //   tictactoe.players[tictactoe.switcher].sound.currentTime = 0;
+    // }, 2000);
+
     $(this).attr('clicked', 'true' )
     $(this).attr('src', tictactoe.players[tictactoe.switcher].image)
 
-    // tictactoe.play()
     console.log(tictactoe.players[tictactoe.switcher].name);
 
     console.log("clicked");
     const index = $(this).attr('id');
     if(tictactoe.switcher === 0){
       tictactoe.switcher = 1;
-      tictactoe.play('p1', index);
+      tictactoe.play('x', index);
     }else{
       tictactoe.switcher = 0
-      tictactoe.play('p2', index);
+      tictactoe.play('o', index);
     }
     console.log(tictactoe.board);
+
 
   });
 
 
-
+  let audio = $("#sound1")[0];
   let $button = document.querySelector('.button');
   $button.addEventListener('click', function() {
+  audio.play();
   let duration = 0.3,
       delay = 0.08;
   TweenMax.to($button, duration, {scaleY: 1.6, ease: Expo.easeOut});
