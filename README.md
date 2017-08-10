@@ -1,7 +1,7 @@
 # Project 0
 ## Tic Tac Toe
-- This application is a Tic Tac Toe game.
-- The folder contains an index.html file, an audio folder which contains the guitar and piano sounds, a css folder which contains the style.css file, an images folder which contains the background picture and instruments pictures, a js folder which contais the jquery.js and the Javascript file, and a README.md file.
+- This application is a Tic Tac Toe game.   :video_game:
+- The folder contains an index.html file, an audio folder which contains the guitar :guitar: and piano :musical_keyboard: sounds, a css folder which contains the style.css file, an images folder which contains the background picture and instruments pictures, a js folder which contais the jquery.js and the Javascript file, and a README.md file.
 - This application was created by Miriam Espinsosa for Project 0 - WDi23 General Assembly.
 
 ### Online version
