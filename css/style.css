@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Bowlby+One');
 
+body{
+  background: #f2f2f2 url(http://wallpapercave.com/wp/IE4qaxU.jpg);
+}
+
 h1{
   font-family: 'Bowlby One', cursive;
   color: #4242b9;
@@ -8,7 +12,7 @@ h1{
   font-size: 60px;
 }
 
-.container {
+/*.container {
   width: 70%;
   height: 810px;
   margin: auto;
@@ -18,7 +22,7 @@ h1{
   border-bottom-right-radius: 1em;
   position: relative;
   overflow: hidden;
-}
+}*/
 
 .tictactoe {
   margin: auto;
