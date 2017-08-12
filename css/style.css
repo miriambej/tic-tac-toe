@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Bowlby+One');
 
 body{
-  background: #f2f2f2 url(http://wallpapercave.com/wp/IE4qaxU.jpg);
+  height: 100%;
+  background-image: url(http://wallpaperpulse.com/img/1801370.jpg);
+  background-position: center center;
+			background-repeat:  no-repeat;
+			background-attachment: fixed;
+			background-size:  cover;
+			background-color: #999;
 }
 
 h1{
@@ -23,6 +29,11 @@ h1{
   position: relative;
   overflow: hidden;
 }*/
+
+.container {
+  height: 100%;
+  width: 100%; 
+}
 
 .tictactoe {
   margin: auto;

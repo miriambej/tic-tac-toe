@@ -1,7 +1,7 @@
 //logic code
 tictactoe = {
 
-  players : [ { player:0, name: 'guitar', image:"./images/guitar.png", score:0}, { player:1 , name: 'piano', image:"./images/piano.png", score:0 } ],
+  players : [ { player:0, name: 'woody', image:"./images/woody.png", score:0}, { player:1 , name: 'buzz', image:"./images/buzz.png", score:0 } ],
 
   switcher:0,
 
@@ -11,12 +11,12 @@ tictactoe = {
 
   alertWinMessage(winner){
     setTimeout(function(){
-      tictactoe.players[tictactoe.switcher].score++
+      tictactoe.players[tictactoe.switcher].score++                  //add score when player wins
       console.log(tictactoe.players[tictactoe.switcher].score);
       if (winner === 'x') {
-        alert(`The winner is guitar`);
+        alert(`The winner is woody`);
       } else {
-        alert(`The winner is piano`);
+        alert(`The winner is buzz`);
       }
       tictactoe.reset()
     }, 150 )
@@ -44,8 +44,8 @@ tictactoe = {
     this.board = ["_","_","_","_","_","_","_","_","_"]
     $(".top").removeAttr('clicked')
     this.turns = 0;
-    $("#number-score-guitar").html(tictactoe.players[0].score)
-    $("#number-score-piano").html(tictactoe.players[1].score)
+    $("#number-score-woody").html(tictactoe.players[0].score) //updating the winner score at the top
+    $("#number-score-buzz").html(tictactoe.players[1].score)  // ""
     tictactoe.players[0].sound.pause();
     tictactoe.players[1].sound.pause();
   },
@@ -86,11 +86,11 @@ tictactoe = {
 
 $(document).ready(function(){
 
-  let guitar = $('#sound1')[0];
-  tictactoe.players[0].sound = guitar;
+  let woody = $('#sound1')[0];
+  tictactoe.players[0].sound = woody;
 
-  let piano = $('#sound2')[0];
-  tictactoe.players[1].sound = piano;
+  let buzz = $('#sound2')[0];
+  tictactoe.players[1].sound = buzz;
 
   $('img').on('click', function() {
     console.log($(this));
