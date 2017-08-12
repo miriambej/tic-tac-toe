@@ -74,16 +74,11 @@ tictactoe = {
       (this.board[0]===player) && (this.board[4]===player) && (this.board[8]===player) || //diagonal
       (this.board[2]===player) && (this.board[4]===player) && (this.board[6]===player)  //diagonal
       ){
-      //alert("you won");
       this.alertWinMessage(player);
-      //this.reset();
-      // t = setTimeout("tictactoe.reset()",2000);
-      // this.clearBoard();
 
 
     }else if (this.turns === 9) {
       this.alertDrawMessage();
-      //this.reset();
     }
   }
 
@@ -101,16 +96,15 @@ $(document).ready(function(){
 
   $('img').on('click', function() {
     console.log($(this));
-
     if($(this).attr('clicked' )) {
       return;
     }
+
     tictactoe.players[0].sound.pause();
     tictactoe.players[0].sound.currentTime = 0;
     tictactoe.players[1].sound.pause();
     tictactoe.players[1].sound.currentTime = 0;
     $(this).attr('src', tictactoe.players[tictactoe.switcher].sound.play())
-
 
     $(this).attr('clicked', 'true' )
     $(this).attr('src', tictactoe.players[tictactoe.switcher].image)
