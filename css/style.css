@@ -12,7 +12,7 @@ body{
 
 h1{
   font-family: 'Bowlby One', cursive;
-  color: #4242b9;
+  color: #BECE2D;
   vertical-align: middle;
   margin: 0;
   font-size: 60px;
@@ -32,7 +32,7 @@ h1{
 
 .container {
   height: 100%;
-  width: 100%; 
+  width: 100%;
 }
 
 .tictactoe {
@@ -45,7 +45,7 @@ h1{
 }
 
 .button {
-  background: #4242b9;
+  background: #BECE2D;
   width: 180px;
   padding: 4px 0;
   position: absolute;
@@ -59,7 +59,7 @@ h1{
   font-family: 'Bowlby One', cursive;
   text-align: center;
   text-transform: uppercase;
-  color: #FFF;
+  color: #4188D6;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -81,26 +81,26 @@ h1{
 }
 
 .score-board-x {
-  background-color: #4242b9;
+  background-color: #BECE2D;
   width: 131px;
   height: 110px;
   position: absolute;
   top: 0%;
   border: 6px;
-  border-color: #4242b9;
+  border-color: #BECE2D;
   border-style: solid;
   margin: 14px;
   border-radius: 20%;
 }
 
 .score-board-y {
-  background-color: #4242b9;
+  background-color: #BECE2D;
   width: 131px;
   height: 110px;
   position: absolute;
   top: 0%;
   border: 6px;
-  border-color: #4242b9;
+  border-color: #BECE2D;
   border-style: solid;
   right: 0;
   margin: 14px;
@@ -109,7 +109,7 @@ h1{
 
 #number-score, p {
   font-family: 'Bowlby One', cursive;
-  color: white;
+  color: #4188D6;
   vertical-align: middle;
   margin: 0;
   font-size: 20px;
