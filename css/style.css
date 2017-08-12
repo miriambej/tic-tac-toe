@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Bowlby+One');
 
-body{
-  height: 100%;
-  background-image: url(http://wallpaperpulse.com/img/1801370.jpg);
-  background-position: center center;
-			background-repeat:  no-repeat;
-			background-attachment: fixed;
-			background-size:  cover;
-			background-color: #999;
-}
+  body{
+    height: 100%;
+    background-image: url(http://wallpaperpulse.com/img/1801370.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
 
 h1{
   font-family: 'Bowlby One', cursive;
@@ -50,7 +49,7 @@ h1{
   padding: 4px 0;
   position: absolute;
   left: 50%;
-  top: 92%;
+  top: 96%;
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
   border-radius: 3px;
