@@ -14,18 +14,25 @@ tictactoe = {
       tictactoe.players[tictactoe.switcher].score++                  //add score when player wins
       console.log(tictactoe.players[tictactoe.switcher].score);
       if (winner === 'x') {
-        alert(`The winner is woody`);
+        $( ".buzz" ).empty();
+        $( ".draw" ).empty();
+        $('.woody').text(`The winner is woody`);
       } else {
-        alert(`The winner is buzz`);
+        $( ".woody" ).empty();
+        $( ".draw" ).empty();
+        $('.buzz').text(`The winner is buzz`);
       }
-      tictactoe.reset()
+      tictactoe.reset()  // calls reset board
     }, 150 )
 
   },
 
   alertDrawMessage(){
     setTimeout(function(){
-      alert('Nobody wins!')
+      $( ".buzz" ).empty();
+      $( ".woody" ).empty();
+      $('.draw').text('Nobody wins!');
+      tictactoe.reset()  // calls reset board
     }, 150 )
   },
 
@@ -94,7 +101,7 @@ $(document).ready(function(){
 
   $('img').on('click', function() {
     console.log($(this));
-    //$(this).context.src = tictactoe.players[tictactoe.switcher].img
+
     if($(this).attr('clicked' )) {
       return;
     }
@@ -104,10 +111,6 @@ $(document).ready(function(){
     tictactoe.players[1].sound.currentTime = 0;
     $(this).attr('src', tictactoe.players[tictactoe.switcher].sound.play())
 
-    // setTimeout(function (){
-    //   tictactoe.players[tictactoe.switcher].sound.pause();
-    //   tictactoe.players[tictactoe.switcher].sound.currentTime = 0;
-    // }, 2000);
 
     $(this).attr('clicked', 'true' )
     $(this).attr('src', tictactoe.players[tictactoe.switcher].image)
