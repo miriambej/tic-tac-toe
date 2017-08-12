@@ -123,7 +123,8 @@ h1{
 	float: right;
 	position: absolute;
 	top: 180px;
-  left: 220px;
+  left: 15px;
   color: #CDDC39;
 	font-size: 42px;
+  text-shadow: -1px 0 #4188D6, 0 1px #4188D6, 1px 0 #4188D6, 0 -1px #4188D6;
 }
